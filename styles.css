@@ -1,0 +1,506 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #F7F4F2;
+    background-color: #141414;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Consistent padding for all sections */
+}
+
+/* Header Styles */
+header {
+    background-color: #141414;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    /* Remove horizontal padding */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo Styles */
+.logo img {
+    height: 50px;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F7F4F2;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo a:hover {
+    color: #ff6b6b;
+}
+
+/* Navigation Styles */
+.nav-center {
+    display: flex;
+    list-style: none;
+}
+
+.nav-center li {
+    margin: 0 1rem;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: #F7F4F2;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-center a:hover {
+    color: #ff6b6b;
+}
+
+.nav-right button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    color: #F7F4F2;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+    overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+}
+
+.hero .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff4757;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Menu Section */
+.menu {
+    padding: 50px 0;
+    text-align: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.menu-grid {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.menu-column {
+    width: 48%;
+}
+
+.menu-item {
+    text-align: left;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.menu-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    padding-right: 80px;
+}
+
+.menu-item p {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item .price {
+    color: #ff6b6b;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu-item::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: repeating-linear-gradient(to right, #F7F4F2 0, #F7F4F2 4px, transparent 4px, transparent 8px);
+    margin-top: 0.5rem;
+    opacity: 0.3;
+}
+
+/* Featured Pizzas Section */
+.featured-pizzas {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+    background-color: #141414;
+    color: #F7F4F2;
+}
+
+.section-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+}
+
+.section-subtitle {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+}
+
+.pizza-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.pizza-item {
+    max-width: 250px;
+}
+
+.pizza-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.pizza-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.pizza-item p {
+    font-size: 1rem;
+    color: #ff6b6b;
+}
+
+.more-pizzas-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.more-pizzas-btn:hover {
+    background-color: #ff4757;
+}
+
+.arrow {
+    margin-left: 0.5rem;
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #141414;
+    color: #F7F4F2;
+    padding: 50px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #F7F4F2;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #F7F4F2;
+    font-size: 1.5rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #ff6b6b;
+    color: #F7F4F2;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    opacity: 0.7;
+    z-index: 1000;
+}
+
+#back-to-top:hover {
+    background-color: #ff4757;
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+        /* Maintain consistent padding */
+    }
+
+    .menu-grid {
+        flex-direction: column;
+    }
+
+    .menu-column {
+        width: 100%;
+    }
+
+    .pizza-grid {
+        flex-wrap: wrap;
+    }
+
+    .pizza-item {
+        flex-basis: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero .price {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem 0;
+        /* Remove horizontal padding */
+    }
+
+    .nav-center {
+        margin: 1rem 0;
+    }
+
+    .nav-right {
+        margin-top: 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 0;
+        /* Remove horizontal padding */
+    }
+
+    .hero-content,
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+    }
+
+    .experience-content {
+        flex-direction: column;
+    }
+
+    .experience-content img {
+        max-width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .section-subtitle {
+        font-size: 2.5rem;
+    }
+
+    .pizza-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pizza-item {
+        max-width: 100%;
+    }
+
+    .pizza-item img {
+        width: 40%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero .price {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .menu h2 {
+        font-size: 2rem;
+    }
+
+    .menu-item h3 {
+        font-size: 1rem;
+        padding-right: 60px;
+    }
+
+    .menu-item p {
+        font-size: 0.8rem;
+    }
+
+    .menu-item .price {
+        font-size: 0.9rem;
+    }
+
+    .section-subtitle {
+        font-size: 2rem;
+    }
+
+    .pizza-item img {
+        width: 50%;
+    }
+}
