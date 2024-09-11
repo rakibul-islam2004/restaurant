@@ -11,14 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Mobile menu toggle
-    const menuIcon = document.querySelector('.menu-icon');
-    const navMenu = document.querySelector('nav ul');
+    let icon = document.querySelector('.icon');
+    let ul = document.querySelector('nav ul');
+
+    icon.addEventListener("click", ()=>{
+        ul.classList.toggle("showData");
+        console.log(ul)
+
+        if(ul.className == "nav-center showData"){
+            document.getElementById("bar").className= "fa-solid fa-xmark";
+        }
+        else{
+            document.getElementById("bar").className= "fa-solid fa-bars";
+        }
+    })
     
-    if (menuIcon && navMenu) {
-        menuIcon.addEventListener('click', function() {
-            navMenu.classList.toggle('show');
-        });
-    }
+
 
     // Add to cart functionality (placeholder)
     const addToCartButtons = document.querySelectorAll('.add-to-cart');

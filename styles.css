@@ -88,6 +88,24 @@ nav {
     color: #F7F4F2;
 }
 
+/* menu icon */
+.icon {
+    display: none;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 24px;
+    color: #F7F4F2;
+    margin-bottom: auto;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #ff6b6b;
+}
+
+
+
 /* Hero Section */
 .hero {
     display: flex;
@@ -405,6 +423,7 @@ footer {
 
     .nav-right {
         margin-top: 1rem;
+        margin-left: 10%;
     }
 
     .hero {
@@ -462,6 +481,42 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .nav-center {
+        display: none;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .showData {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        margin: 0px;
+        padding: 20px;
+        background-color: #181818;
+        width: 100%;
+        gap: 20px;
+    }
+
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-right {
+        margin-top: 0px;
+    }
+
+    .hero-content {
+        margin-top: 16px;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
@@ -503,4 +558,6 @@ footer {
     .pizza-item img {
         width: 50%;
     }
+
+
 }
