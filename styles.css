@@ -12,6 +12,9 @@ body {
     background-color: #141414;
     margin: 0;
     overflow-x: hidden;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container {
@@ -26,7 +29,9 @@ header {
     background-color: #141414;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     position: fixed;
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     z-index: 1000;
 }
 
@@ -423,7 +428,6 @@ footer {
 
     .nav-right {
         margin-top: 1rem;
-        margin-left: 10%;
     }
 
     .hero {
@@ -489,18 +493,23 @@ footer {
         display: block;
     }
 
+    .nav-center li {
+        margin-left: 0px;
+    }
+
     .showData {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         position: absolute;
         top: 60px;
         margin: 0px;
         padding: 20px;
         background-color: #181818;
-        width: 100%;
+        width: 50%;
         gap: 20px;
+        padding-left: 0px;
+        margin-left: 0px;
     }
 
     nav {
@@ -511,6 +520,7 @@ footer {
 
     .nav-right {
         margin-top: 0px;
+        margin-left: 5%;
     }
 
     .hero-content {
@@ -558,6 +568,4 @@ footer {
     .pizza-item img {
         width: 50%;
     }
-
-
 }

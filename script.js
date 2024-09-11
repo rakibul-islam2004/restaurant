@@ -13,10 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     let icon = document.querySelector('.icon');
     let ul = document.querySelector('nav ul');
+    let main = document.querySelector('main');
+    let logo = document.querySelector('.logo');
+    let nav_right = document.querySelector('.nav-right');
 
     icon.addEventListener("click", ()=>{
         ul.classList.toggle("showData");
-        console.log(ul)
 
         if(ul.className == "nav-center showData"){
             document.getElementById("bar").className= "fa-solid fa-xmark";
@@ -24,7 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
         else{
             document.getElementById("bar").className= "fa-solid fa-bars";
         }
-    })
+    });
+
+    [ main, logo , nav_right ].forEach(function(element) {
+        element.addEventListener("click",()=>{
+        ul.classList.remove("showData");
+        document.getElementById("bar").className= "fa-solid fa-bars";
+        });
+    });
     
 
 
